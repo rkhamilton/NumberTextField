@@ -26,14 +26,12 @@ public struct NumberTextField: View {
     
     public var body: some View {
         HStack {
-            Spacer()
             NumberTextFieldViewRep(placeholder: self.placeholder,
                                    value: self.$value,
                                    formatter: self.formatter,
                                    onChange: self.onChange,
                                    onCommit: self.onCommit,
                                    isActive: self.$isActive)
-            Spacer()
         }
         .onTapGesture {
             self.isActive = true
